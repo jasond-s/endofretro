@@ -1,0 +1,17 @@
+{
+  "name": "endofretro",
+  "version": "0.0.1",
+  "description": "Site for the band end of retro",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm build; karma karma.conf.js"
+  },
+  "author": "jasond_s",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
