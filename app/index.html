@@ -71,8 +71,10 @@
         text-align: center;
         perspective: 0px;
         perspective-origin: 0px 0px;
-        transform: translateY(-400px) translateX(500px);     
+        transform: translateY(-550px) translateX(500px);     
         z-index: -1;   
+        margin-bottom: 100px;
+        max-height: 1500px;
       }
 
       .cube {
@@ -176,6 +178,10 @@
         transform: translateZ(25px);
       }
 
+      .cube-anim .label {
+        display: none;
+      }
+
       @keyframes spin-nav {
         from { transform: rotateY(0); }
         to { transform: rotateY(360deg); }
@@ -249,17 +255,16 @@
       }
 
       .stop.wrap .cube .front,
-      .stop.wrap .cube .back {
+      .stop.wrap .cube .back,
+      .stop.wrap .cube .label {
         display: inline-block;
       }
 
       .stop.wrap .cube .front{
-        width: 40%;
-        float: left;
+        width: 30%;
       }
       .stop.wrap .cube .back {
-        width: 40%;
-        float: right;
+        width: 30%;
       }
     </style>
 
@@ -319,6 +324,13 @@
           <div class="btn right"><span>turn animation off</span></div>
           <div class="btn top"></div>
           <div class="btn bottom"></div>
+        </div>
+      </div>
+
+      <div id="music" class="row">
+        <div class="section">
+          <h1>Music</h1>
+          <div>Live demos</div>
         </div>
       </div>
 
