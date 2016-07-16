@@ -1,235 +1,248 @@
 
-      body {
-        font-family: 'Libre Baskerville', serif;
-        background: url(/img/retro.jpg);
-        background-size: 100% 100%;
-        overflow-x: hidden;
-      }
+  body {
+    font-family: 'Libre Baskerville', serif;
+    background: url(/img/retro.jpg);
+    background-size: 100% 100%;
+    overflow-x: hidden;
+  }
 
-      .navigate {
-        cursor: pointer;
-      }
+  .navigate {
+    cursor: pointer;
+  }
 
-      .navigate:hover {
-        color: #7F213C;
-        text-shadow: -1px 1px 2px #ccc
-      }
+  .navigate:hover {
+    color: #7F213C;
+    text-shadow: -1px 1px 2px #ccc
+  }
 
-      .section {
-        border: 3px solid #000;
-        background: #fff;
-        margin-bottom: 100px;
-        padding: 25px;
-      }
+  .section {
+    border: 3px solid #000;
+    background: #fff;
+    margin-bottom: 100px;
+    padding: 25px;
+    margin-left:  15%;
+    margin-right: 5%;
+  }
 
-      .wrap-nav {
-        position: fixed;
-        left: 5%;
-        top: 5%;
-        background: #fff;
-        border: 3px solid #000;
-        padding: 25px;  
-        z-index: 100;      
-      }
+  .wrap-nav {
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    background: #fff;
+    border: 3px solid #000;
+    padding: 25px;  
+    z-index: 100;      
+  }
 
-      .wrap {
-        float: left;
-        position: relative;
-        text-align: center;
-        perspective: 0px;
-        perspective-origin: 0px 0px;
-        transform: translateY(-550px) translateX(500px);     
-        z-index: -1;   
-        margin-bottom: 100px;
-        max-height: 1500px;
-      }
+  .wrap {
+    float: left;
+    position: relative;
+    text-align: center;
+    perspective: 0px;
+    perspective-origin: 0px 0px;
+    transform: translateY(-550px) translateX(500px);     
+    z-index: -1;   
+    margin-bottom: 100px;
+    max-height: 1500px;
+  }
 
-      .cube {
-        position: relative;
-        width: 100%;
-        transform-style: preserve-3d;
-      }
+  .cube {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+  }
 
-      .cube div {        
-        width: 450px;
-        height: 450px;
-        border: 3px solid #000;
-      }
+  .cube div {        
+    width: 450px;
+    height: 450px;
+    border: 3px solid #000;
+  }
 
-      .cube .back {
-        transform: translateZ(-225px) rotateY(180deg) translateY(-450px);
-      }
-      .cube .right {
-        transform: rotateY(-270deg) translateX(225px) translateY(-450px);
-        transform-origin: top right;
-      }
-      .cube .left {
-        transform: rotateY(270deg) translateX(-225px);
-        transform-origin: center left;
-      }
-      .cube .top {
-        transform: rotateX(-90deg) translateY(-225px);
-        transform-origin: top center;
-      }
-      .cube .bottom {
-        transform: rotateX(90deg) translateY(225px) translateZ(900px);
-        transform-origin: bottom center;
-      }
-      .cube .front {
-        transform: translateZ(225px);
-      }
+  .cube .back {
+    transform: translateZ(-225px) rotateY(180deg) translateY(-450px);
+  }
+  .cube .right {
+    transform: rotateY(-270deg) translateX(225px) translateY(-450px);
+    transform-origin: top right;
+  }
+  .cube .left {
+    transform: rotateY(270deg) translateX(-225px);
+    transform-origin: center left;
+  }
+  .cube .top {
+    transform: rotateX(-90deg) translateY(-225px);
+    transform-origin: top center;
+  }
+  .cube .bottom {
+    transform: rotateX(90deg) translateY(225px) translateZ(900px);
+    transform-origin: bottom center;
+  }
+  .cube .front {
+    transform: translateZ(225px);
+  }
 
-      @keyframes spin {
-        from { transform: rotateY(0) rotateX(0); }
-        to { transform: rotateY(360deg) rotateX(360deg); }
-      }
+  @keyframes spin {
+    from { transform: rotateY(0) rotateX(0); }
+    to { transform: rotateY(360deg) rotateX(360deg); }
+  }
 
-      .cube {
-        animation: spin 10s infinite linear;
-      }    
+  .cube {
+    animation: spin 10s infinite linear;
+  }    
 
 
-      .wrap-anim {
-        position: fixed;
-        right: 10%;
-        top: 5%;
-        text-align: center;
-        perspective: 0px;
-        perspective-origin: 0px 0px;
-        transform: rotateZ(15deg);
-        z-index: 100;
-      }
+  .wrap-anim {
+    position: fixed;
+    right: 10%;
+    top: 5%;
+    text-align: center;
+    perspective: 0px;
+    perspective-origin: 0px 0px;
+    transform: rotateZ(15deg);
+    z-index: 100;
+  }
 
-      .cube-anim {
-        position: relative;
-        width: 50px;
-        transform-style: preserve-3d;
-      }
+  .cube-anim {
+    position: relative;
+    width: 50px;
+    transform-style: preserve-3d;
+  }
 
-      .cube-anim div {        
-        border: 3px solid #000;
-        background: #F98636;
-        position: absolute;
-        width: 50px;
-        height: 50px;
-      }
+  .cube-anim div {        
+    border: 3px solid #000;
+    background: #F98636;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
 
-      .cube-anim div span {
-        border: 3px solid #000;
-        background: #fff;
-        padding: 5px;
-        font-weight: 600;
-        font-size: 14pt;
-      }
+  .cube-anim div span {
+    border: 3px solid #000;
+    background: #fff;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 14pt;
+  }
 
-      .cube-anim .back {
-        transform: translateZ(-25px) rotateY(180deg);
-      }
-      .cube-anim .right {
-        transform: rotateY(-270deg) translateX(25px);
-        transform-origin: top right;
-      }
-      .cube-anim .left {
-        transform: rotateY(270deg) translateX(-25px);
-        transform-origin: center left;
-      }
-      .cube-anim .top {
-        transform: rotateX(-90deg) translateY(-25px);
-        transform-origin: top center;
-      }
-      .cube-anim .bottom {
-        transform: rotateX(90deg) translateY(25px);
-        transform-origin: bottom center;
-      }
-      .cube-anim .front {
-        transform: translateZ(25px);
-      }
+  .cube-anim .back {
+    transform: translateZ(-25px) rotateY(180deg);
+  }
+  .cube-anim .right {
+    transform: rotateY(-270deg) translateX(25px);
+    transform-origin: top right;
+  }
+  .cube-anim .left {
+    transform: rotateY(270deg) translateX(-25px);
+    transform-origin: center left;
+  }
+  .cube-anim .top {
+    transform: rotateX(-90deg) translateY(-25px);
+    transform-origin: top center;
+  }
+  .cube-anim .bottom {
+    transform: rotateX(90deg) translateY(25px);
+    transform-origin: bottom center;
+  }
+  .cube-anim .front {
+    transform: translateZ(25px);
+  }
 
-      .cube-anim .label {
-        display: none;
-      }
+  .cube-anim .label {
+    display: none;
+  }
 
-      @keyframes spin-nav {
-        from { transform: rotateY(0); }
-        to { transform: rotateY(360deg); }
-      }
+  @keyframes spin-nav {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+  }
 
-      .cube-anim {
-        animation: spin-nav 6s infinite linear;
-      } 
+  .cube-anim {
+    animation: spin-nav 6s infinite linear;
+  } 
 
-      .cube-anim:hover .btn,
-      .cube-anim:hover .btn .span  {
-        background: #fff;
-        box-shadow: 0 0 100px #F98636;
-      }
+  .cube-anim:hover .btn,
+  .cube-anim:hover .btn .span  {
+    background: #fff;
+    box-shadow: 0 0 100px #F98636;
+  }
 
-      .stop.wrap {
-        float: right;
-        z-index: 0;
-        width: 100%;
-      }
+  .stop.wrap {
+    float: right;
+    z-index: 0;
+    width: 100%;
+  }
 
-      .stop.wrap .cube {
-        width: 100%;
-      }
+  .stop.wrap .cube {
+    width: 100%;
+  }
 
-      .stop.wrap,
-      .stop.wrap-anim {
-        transform: translateY(0);
-      } 
+  .stop.wrap,
+  .stop.wrap-anim {
+    transform: translateY(0);
+  } 
 
-      .stop.wrap .cube,
-      .stop.wrap-anim .cube-anim {
-        animation: none;
-      }
+  .stop.wrap .cube,
+  .stop.wrap-anim .cube-anim {
+    animation: none;
+  }
 
-      .stop.wrap .cube .back,
-      .stop.wrap .cube .right,
-      .stop.wrap .cube .left,
-      .stop.wrap .cube .top,      
-      .stop.wrap .cube .bottom,
-      .stop.wrap .cube .front,
-      .stop.wrap-anim .cube-anim .back,
-      .stop.wrap-anim .cube-anim .right,
-      .stop.wrap-anim .cube-anim .left,
-      .stop.wrap-anim .cube-anim .top,      
-      .stop.wrap-anim .cube-anim .bottom,
-      .stop.wrap-anim .cube-anim .front {
-        transform: translateZ(225px);
-        transform-origin: none;
-        position: relative;
-        width: 100%;
-        height: auto;
-      }
+  .stop.wrap .cube .back,
+  .stop.wrap .cube .right,
+  .stop.wrap .cube .left,
+  .stop.wrap .cube .top,      
+  .stop.wrap .cube .bottom,
+  .stop.wrap .cube .front,
+  .stop.wrap-anim .cube-anim .back,
+  .stop.wrap-anim .cube-anim .right,
+  .stop.wrap-anim .cube-anim .left,
+  .stop.wrap-anim .cube-anim .top,      
+  .stop.wrap-anim .cube-anim .bottom,
+  .stop.wrap-anim .cube-anim .front {
+    transform: translateZ(225px);
+    transform-origin: none;
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
 
-      .stop.cube-anim .btn,
-      .stop.cube-anim .btn .span  {
-        background: #fff;
-        box-shadow: 0 0 100px #F98636;
-      }
-   
-      .stop.wrap .cube .bottom,
-      .stop.wrap .cube .top,
-      .stop.wrap .cube .left,
-      .stop.wrap .cube .right,
-      .stop.wrap-anim .cube-anim .back,
-      .stop.wrap-anim .cube-anim .left,
-      .stop.wrap-anim .cube-anim .right,
-      .stop.wrap-anim .cube-anim .top,
-      .stop.wrap-anim .cube-anim .bottom {
-        display: none;        
-      }
+  .stop.cube-anim .btn,
+  .stop.cube-anim .btn .span  {
+    background: #fff;
+    box-shadow: 0 0 100px #F98636;
+  }
 
-      .stop.wrap .cube .front,
-      .stop.wrap .cube .back,
-      .stop.wrap .cube .label {
-        display: inline-block;
-      }
+  .stop.wrap .cube .bottom,
+  .stop.wrap .cube .top,
+  .stop.wrap .cube .left,
+  .stop.wrap .cube .right,
+  .stop.wrap-anim .cube-anim .back,
+  .stop.wrap-anim .cube-anim .left,
+  .stop.wrap-anim .cube-anim .right,
+  .stop.wrap-anim .cube-anim .top,
+  .stop.wrap-anim .cube-anim .bottom {
+    display: none;        
+  }
 
-      .stop.wrap .cube .front{
-        width: 30%;
-      }
-      .stop.wrap .cube .back {
-        width: 30%;
-      }
+  .stop.wrap .cube .front,
+  .stop.wrap .cube .back {
+    display: inline-block;
+    width: 45%;
+  }
+
+  .stop.wrap .cube .front{
+    float: left;
+  }
+  .stop.wrap .cube .back {
+    float: right;
+  }
+
+
+@media (max-width:720px) {
+
+	.wrap-nav {
+		position: absolute !important;
+		left: 1% !important;
+		top: 1% !important;    
+	}
+
+}

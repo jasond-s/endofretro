@@ -1,5 +1,6 @@
 
-(function () {
+(function (eor, win) {
+
 	var animon = true;
 
 	function justStopIt() {
@@ -14,6 +15,8 @@
 		animon = !animon;
 	}
 
+	eor.justStopIt = justStopIt;
+
 	function bringIntoView(goTo) {  
 		var elem = $(goTo);
 		var offset = elem.offset();
@@ -25,13 +28,27 @@
 	function goToMusic () {
 		bringIntoView('body');
 	}
+
+	eor.goToMusic = goToMusic;
+
 	function goToLive () {
 		bringIntoView('#live');
 	}
+
+	eor.goToLive = goToLive;
+
 	function goToSocial () {
 		bringIntoView('#social');
 	}
+
+	eor.goToSocial = goToSocial;
+
 	function goToContact () {
 		bringIntoView('#contact');
 	}
-}())
+
+	eor.goToContact = goToContact;
+
+	win.EoR = eor;
+
+}(EoR || {}, window))
