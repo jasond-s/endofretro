@@ -1,16 +1,27 @@
 
 (function (eor, win) {
 
+	window.setTimeout(function () {
+		$('.loading-container').fadeOut(1000, function () {
+			$('.loading').fadeOut(2000, function () {
+				$('.loading').css({display: 'none'});
+			});
+		});
+	}, 3000);
+
 	var animon = true;
 
 	function justStopIt() {
 		$('.wrap').toggleClass('stop');
 		$('.wrap-anim').toggleClass('stop');
+		$('.wrap-nav').toggleClass('stop');
+		$('.marquee').toggleClass('stop');
+		$('.background-anim').toggleClass('stop');
 
 		if (animon)
-		  $('.cube-anim span').text('turn animation on');
+		  $('.cube-anim .btn span').text('get in the sea');
 		else 
-		  $('.cube-anim span').text('turn animation off');
+		  $('.cube-anim .btn span').text('stop this madness');
 
 		animon = !animon;
 	}

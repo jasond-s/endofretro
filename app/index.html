@@ -34,7 +34,17 @@
       var EoR = {};
     </script>
 
+    <div class="background">&nbsp;</div>
+
+    <div class="background-anim background-anim-1">&nbsp;</div>
+    <div class="background-anim background-anim-2">&nbsp;</div>
+    <div class="background-anim background-anim-3">&nbsp;</div>
+    <div class="background-anim background-anim-4">&nbsp;</div>
+
     <div class="container">
+
+      <div class="loading"><div class="loading-container"><h1>LOADING......</h1></div></div>
+
 
       <div class="wrap-nav">
         <h2>EoR</h2>
@@ -47,72 +57,85 @@
 
       <div class="wrap-anim">
         <div class="row cube-anim" onclick="EoR.justStopIt()">
-          <div class="btn front"><span>turn animation off</span></div>
-          <div class="btn back"><span>turn animation off</span></div>
-          <div class="btn left"><span>turn animation off</span></div>
-          <div class="btn right"><span>turn animation off</span></div>
+          <div class="btn front"><span>stop this madness</span></div>
+          <div class="btn back"><span>stop this madness</span></div>
+          <div class="btn left"><span>stop this madness</span></div>
+          <div class="btn right"><span>stop this madness</span></div>
           <div class="btn top"></div>
           <div class="btn bottom"></div>
         </div>
       </div>
 
-      <div id="music" class="row">
-        <div class="section">
-          <h1>Music</h1>
-          <div>Live demos</div>
-        </div>
-      </div>
-
-      <div class="row">
+      <div id="player" class="row">
         <div class="wrap">
-          <div class="row cube">
-            <div class="row left">
+          <div class="cube">
+            <div class="left">
               <img src="img/theendofretro.jpg" width="450" height="450">
             </div>
-            <div class="row front">
+            <div class="front">
               <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/266807359&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
             </div>
-            <div class="row top">
+            <div class="top">
               <img src="img/theendofretro.jpg" width="450" height="450">
             </div>
-            <div class="row right">
+            <div class="right">
               <img src="img/theendofretro.jpg" width="450" height="450">
             </div>
-            <div class="row back">
+            <div class="back">
               <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/266807351&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
             </div>
-            <div class="row bottom">
+            <div class="bottom">
               <img src="img/theendofretro.jpg" width="450" height="450">
             </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="music" class="row">
+        <div class="col-xs-12">
+          <div class="section">
+            <h1>Music</h1>
+            <div class="marquee"><span>Live demos of Tell me and Petra available free to listen on <a href="https://soundcloud.com/endofretro" target="_blank">Soundcloud.</a></span></div>
           </div>
         </div>
       </div>
 
       <div id="live" class="row">
-        <div class="section">
+        <div class="col-xs-12">
+          <div class="section">
           <h1>Live</h1>
           <ul>
             <li>Coming soon.</li>
           </ul>
         </div>
+        </div>
       </div>
 
       <div id="social" class="row">
-        <div class="section">
+        <div class="col-xs-12">
+          <div class="section">
           <h1>Social</h1>
+          <ul>
+            <li><div class="marquee"><span><a href="https://soundcloud.com/endofretro" target="_blank">Soundcloud</a></span></div></li>
+            <li><div class="marquee"><span><a href="https://facebook.com/endofretro" target="_blank">Facebook</a></span></div></li>
+            <li><div class="marquee"><span><a href="https://twitter.com/endofretro" target="_blank">Twitter</a></span></div></li>
+          </ul>
+        </div>
         </div>
       </div>
 
       <div id="contact" class="row">
-        <div class="section">
+        <div class="col-xs-12">
+          <div class="section">
           <h1>Contact</h1>
-          <div>
-            <a href="emailto:jason@jason.co.uk">Email</a>
+          <div class="marquee"><span><a href="mailto:jason@jason.co.uk">Email</a></span>
           </div>
+        </div>
         </div>
       </div>
 
-    </div> <!-- /container -->        
+    </div>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 

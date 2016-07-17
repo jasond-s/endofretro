@@ -1,9 +1,76 @@
 
   body {
     font-family: 'Libre Baskerville', serif;
+    overflow-x: hidden;
+  }
+
+  .background {  	
     background: url(/img/retro.jpg);
     background-size: 100% 100%;
-    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -9999;
+  }
+
+	.background-anim,
+	.background-anim,
+	.background-anim,
+  .background-anim {  	
+    background: url(/img/retro.jpg);
+    opacity: 0.5;
+    background-size: 100% 100%;
+    position: fixed;
+    top: -50%;
+    bottom: -50%;
+    left: -50%;
+    right: -50%;
+    z-index: -9998;
+  }
+
+	.background-anim-1 { 
+		animation: background-spin-1 2s infinite linear;
+  }
+	.background-anim-2 { 
+		animation: background-spin-2 3s infinite linear;
+  }
+	.background-anim-3 { 
+		animation: background-spin-1 5s infinite linear;
+  }
+  .background-anim-4 { 
+		animation: background-spin-2 2s infinite linear;
+  }
+
+  @keyframes background-spin-1 {
+    from { transform: rotateZ(360deg); }
+    to { transform: rotateZ(0); }
+  }
+
+  @keyframes background-spin-2 {
+    from { transform: rotateZ(0); }
+    to { transform: rotateZ(360deg); }
+  }
+
+  .loading {
+    position: fixed;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+
+  .loading-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .loading-container h1 {
+    margin-top: 100px;
   }
 
   .navigate {
@@ -11,20 +78,20 @@
   }
 
   .navigate:hover {
-    color: #7F213C;
-    text-shadow: -1px 1px 2px #ccc
+    text-shadow: -1px 1px 10px #F98636
   }
 
   .section {
     border: 3px solid #000;
     background: #fff;
     margin-bottom: 100px;
+    margin-left: 15%;
     padding: 25px;
-    margin-left:  15%;
-    margin-right: 5%;
   }
 
   .wrap-nav {
+  	animation: all 2s ease;
+  	transform: rotateZ(-10deg);
     position: fixed;
     left: 5%;
     top: 5%;
@@ -35,51 +102,53 @@
   }
 
   .wrap {
-    float: left;
-    position: relative;
+  	animation: all 2s ease;
+    position: fixed;
     text-align: center;
     perspective: 0px;
-    perspective-origin: 0px 0px;
-    transform: translateY(-550px) translateX(500px);     
+    perspective-origin: 0px 0px;   
     z-index: -1;   
     margin-bottom: 100px;
     max-height: 1500px;
+    left: 30%;
+    top: 50%;
   }
 
   .cube {
     position: relative;
-    width: 100%;
-    transform-style: preserve-3d;
+		width: 450px;
+		transform-style: preserve-3d;
   }
 
   .cube div {        
-    width: 450px;
-    height: 450px;
+    position: absolute;
+		width: 450px;
+		height: 450px;
     border: 3px solid #000;
   }
 
   .cube .back {
-    transform: translateZ(-225px) rotateY(180deg) translateY(-450px);
-  }
-  .cube .right {
-    transform: rotateY(-270deg) translateX(225px) translateY(-450px);
-    transform-origin: top right;
-  }
-  .cube .left {
-    transform: rotateY(270deg) translateX(-225px);
-    transform-origin: center left;
-  }
-  .cube .top {
-    transform: rotateX(-90deg) translateY(-225px);
-    transform-origin: top center;
-  }
-  .cube .bottom {
-    transform: rotateX(90deg) translateY(225px) translateZ(900px);
-    transform-origin: bottom center;
-  }
-  .cube .front {
-    transform: translateZ(225px);
-  }
+		transform: translateZ(-225px) rotateY(180deg);
+	}
+	.cube .right {
+		transform: rotateY(-270deg) translateX(225px);
+		transform-origin: top right;
+	}
+	.cube .left {
+		transform: rotateY(270deg) translateX(-225px);
+		transform-origin: center left;
+	}
+	.cube .top {
+		transform: rotateX(-90deg) translateY(-225px);
+		transform-origin: top center;
+	}
+	.cube .bottom {
+		transform: rotateX(90deg) translateY(225px);
+		transform-origin: bottom center;
+	}
+	.cube .front {
+		transform: translateZ(225px);
+	}
 
   @keyframes spin {
     from { transform: rotateY(0) rotateX(0); }
@@ -163,13 +232,32 @@
   .cube-anim:hover .btn,
   .cube-anim:hover .btn .span  {
     background: #fff;
-    box-shadow: 0 0 100px #F98636;
+    box-shadow: 0 0 80px #F98636;
+  }
+
+  @keyframes spin-fly {
+    from { transform: rotateY(0) rotateZ(10deg); }
+    10% { transform: rotateY(90deg) rotateX(90deg) rotateZ(10deg); }
+    20% { transform: rotateY(180deg) rotateX(90deg) rotateZ(10deg); }
+    30% { transform: rotateY(270deg) rotateX(180deg) rotateZ(10deg); }
+    to { transform: rotateY(360deg) rotateZ(10deg); }
+  }
+
+  .stop.background-anim {
+  	display: none;
   }
 
   .stop.wrap {
     float: right;
+    position: relative;
+    top: auto;
+    left: auto;
     z-index: 0;
     width: 100%;
+  }
+
+  .stop.wrap-nav {
+  	transform: rotateZ(0);
   }
 
   .stop.wrap .cube {
@@ -236,13 +324,77 @@
     float: right;
   }
 
+  .marquee {
+      width: 100%;
+      margin: 0 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+  }
+
+  .marquee span {
+      display: inline-block;
+      padding-left: 100%;  /* show the marquee just outside the paragraph */
+      animation: marquee 10s linear infinite;
+  }
+
+  .stop.marquee span {
+      animation: none;
+      transform-origin: none;
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding-left: 0;
+  }
+
+/* Make it move */
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+@media (max-width:1024px) {
+
+  .wrap-nav {
+    left: 1% !important;
+    top: 1% !important;    
+  }
+
+}
+
 
 @media (max-width:720px) {
 
-	.wrap-nav {
-		position: absolute !important;
-		left: 1% !important;
-		top: 1% !important;    
+	.wrap-nav {		
+    position: absolute !important;
 	}
 
+  .wrap-nav h3,
+  .wrap-nav hr {
+    display: none; 
+  }
+
+  .wrap-anim {  	
+  	position: absolute;
+    left: 65%;
+    top: 10%;
+  }
+
+	.stop.wrap .cube .back,
+  .stop.wrap .cube .front{
+  	position: relative;
+    float: none;
+    display: block;
+    width: 100%;
+  }
+
+  #player {
+  	margin-top: 100px;
+  }
+
+
+  .section {
+    margin-bottom: 75px;
+    margin-left: 0;
+  }
 }
