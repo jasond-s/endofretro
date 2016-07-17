@@ -364,8 +364,8 @@
 
 
 @media (max-width:720px) {
-	
-  .stop.background-anim {
+
+  .background-anim {
   	display: none;
   }
 
