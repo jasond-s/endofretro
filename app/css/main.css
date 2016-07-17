@@ -356,14 +356,18 @@
 @media (max-width:1024px) {
 
   .wrap-nav {
-    left: 1% !important;
-    top: 1% !important;    
+    left: 2% !important;
+    top: 2% !important;    
   }
 
 }
 
 
 @media (max-width:720px) {
+	
+  .stop.background-anim {
+  	display: none;
+  }
 
 	.wrap-nav {		
     position: absolute !important;
@@ -376,7 +380,7 @@
 
   .wrap-anim {  	
   	position: absolute;
-    left: 65%;
+    left: 60%;
     top: 10%;
   }
 
